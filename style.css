@@ -19,16 +19,6 @@ body {
   #random {
     font-size: 2.5em;
   }
-  @media screen and (max-width:800px){
-    img{
-      height:50vh;
-    }
-  }
-  @media screen and (max-width:600px){
-    img{
-      height:23vh;
-    }
-  }
   button {
     width: 130px;
     height: 40px;
