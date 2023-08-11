@@ -1,5 +1,5 @@
 var sec = 00;
-var random = 00;
+var random = 000;
 var appendRandom = document.getElementById("random");
 var appendSec = document.getElementById("sec");
 var buttonStart = document.getElementById("button-start");
@@ -25,7 +25,7 @@ buttonStop.onclick = function () {
 // this function will run when click on reset
 buttonReset.onclick = function () {
   clearInterval(interval);
-  random = "00";
+  random = "000";
   sec = "00";
   appendSec.innerHTML = sec;
   appendRandom.innerHTML = random;
@@ -36,12 +36,16 @@ function startTimer() {
   random++;
 
   if (random < 9) {
-    appendRandom.innerHTML = "0" + random;
+    appendRandom.innerHTML = "0" + "0" + random;
   }
   if (random > 9) {
-    appendRandom.innerHTML = random;
+    appendRandom.innerHTML ="0"+ random;
   }
   if (random > 99) {
+    appendRandom.innerHTML =random;
+  }
+
+  if (random > 299) {
     sec++;
     appendSec.innerHTML = "0" + sec;
     random = 0;
